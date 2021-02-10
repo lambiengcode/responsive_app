@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:outlook/components/side_menu.dart';
 import 'package:outlook/models/Email.dart';
 import 'package:outlook/responsive.dart';
 import 'package:outlook/screens/email/email_screen.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../../constants.dart';
 import 'email_card.dart';
@@ -63,9 +63,10 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                           suffixIcon: Padding(
                             padding: const EdgeInsets.all(
                                 kDefaultPadding * 0.75), //15
-                            child: WebsafeSvg.asset(
-                              "assets/Icons/Search.svg",
-                              width: 24,
+                            child: Icon(
+                              Feather.search,
+                              size: 16.0,
+                              color: kGrayColor,
                             ),
                           ),
                           border: OutlineInputBorder(
@@ -84,10 +85,10 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                     const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Row(
                   children: [
-                    WebsafeSvg.asset(
-                      "assets/Icons/Angle down.svg",
-                      width: 16,
-                      color: Colors.black,
+                    Icon(
+                      Icons.keyboard_arrow_down_rounded,
+                      size: 16.0,
+                      color: kGrayColor,
                     ),
                     SizedBox(width: 5),
                     Text(
@@ -98,9 +99,10 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                     MaterialButton(
                       minWidth: 20,
                       onPressed: () {},
-                      child: WebsafeSvg.asset(
-                        "assets/Icons/Sort.svg",
-                        width: 16,
+                      child: Icon(
+                        Feather.filter,
+                        size: 16.0,
+                        color: kGrayColor,
                       ),
                     ),
                   ],

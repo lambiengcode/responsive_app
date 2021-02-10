@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:outlook/responsive.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../constants.dart';
 import '../extensions.dart';
@@ -47,7 +47,10 @@ class SideMenu extends StatelessWidget {
                 ),
                 color: kPrimaryColor,
                 onPressed: () {},
-                icon: WebsafeSvg.asset("assets/Icons/Edit.svg", width: 16),
+                icon: Icon(
+                  Feather.inbox,
+                  color: kSecondaryColor,
+                ),
                 label: Text(
                   "New message",
                   style: TextStyle(color: Colors.white),
@@ -67,7 +70,10 @@ class SideMenu extends StatelessWidget {
                 ),
                 color: kBgDarkColor,
                 onPressed: () {},
-                icon: WebsafeSvg.asset("assets/Icons/Download.svg", width: 16),
+                icon: Icon(
+                  Feather.download,
+                  color: kTextColor,
+                ),
                 label: Text(
                   "Get messages",
                   style: TextStyle(color: kTextColor),
@@ -78,26 +84,26 @@ class SideMenu extends StatelessWidget {
               SideMenuItem(
                 press: () {},
                 title: "Inbox",
-                iconSrc: "assets/Icons/Inbox.svg",
+                icon: Feather.inbox,
                 isActive: true,
                 itemCount: 3,
               ),
               SideMenuItem(
                 press: () {},
                 title: "Sent",
-                iconSrc: "assets/Icons/Send.svg",
+                icon: Feather.send,
                 isActive: false,
               ),
               SideMenuItem(
                 press: () {},
                 title: "Drafts",
-                iconSrc: "assets/Icons/File.svg",
+                icon: Feather.file,
                 isActive: false,
               ),
               SideMenuItem(
                 press: () {},
                 title: "Deleted",
-                iconSrc: "assets/Icons/Trash.svg",
+                icon: Feather.trash,
                 isActive: false,
                 showBorder: false,
               ),

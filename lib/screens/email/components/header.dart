@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:outlook/responsive.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../../constants.dart';
 
@@ -18,30 +18,34 @@ class Header extends StatelessWidget {
           // We need this back button on mobile only
           if (Responsive.isMobile(context)) BackButton(),
           IconButton(
-            icon: WebsafeSvg.asset(
-              "assets/Icons/Trash.svg",
-              width: 24,
+            icon: Icon(
+              Feather.trash,
+              size: 16.0,
+              color: kGrayColor,
             ),
             onPressed: () {},
           ),
           IconButton(
-            icon: WebsafeSvg.asset(
-              "assets/Icons/Reply.svg",
-              width: 24,
+            icon: Icon(
+              Feather.share,
+              size: 16.0,
+              color: kGrayColor,
             ),
             onPressed: () {},
           ),
           IconButton(
-            icon: WebsafeSvg.asset(
-              "assets/Icons/Reply all.svg",
-              width: 24,
+            icon: Icon(
+              Feather.send,
+              size: 16.0,
+              color: kGrayColor,
             ),
             onPressed: () {},
           ),
           IconButton(
-            icon: WebsafeSvg.asset(
-              "assets/Icons/Transfer.svg",
-              width: 24,
+            icon: Icon(
+              Feather.hard_drive,
+              size: 16.0,
+              color: kGrayColor,
             ),
             onPressed: () {},
           ),
@@ -49,23 +53,26 @@ class Header extends StatelessWidget {
           // We don't need print option on mobile
           if (Responsive.isDesktop(context))
             IconButton(
-              icon: WebsafeSvg.asset(
-                "assets/Icons/Printer.svg",
-                width: 24,
+              icon: Icon(
+                Feather.printer,
+                size: 16.0,
+                color: kGrayColor,
               ),
               onPressed: () {},
             ),
           IconButton(
-            icon: WebsafeSvg.asset(
-              "assets/Icons/Markup.svg",
-              width: 24,
+            icon: Icon(
+              Feather.bookmark,
+              size: 16.0,
+              color: kGrayColor,
             ),
             onPressed: () {},
           ),
           IconButton(
-            icon: WebsafeSvg.asset(
-              "assets/Icons/More vertical.svg",
-              width: 24,
+            icon: Icon(
+              Feather.more_vertical,
+              size: 16.0,
+              color: kGrayColor,
             ),
             onPressed: () {},
           ),

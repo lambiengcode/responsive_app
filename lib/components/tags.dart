@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:websafe_svg/websafe_svg.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 import '../constants.dart';
 
@@ -14,9 +14,17 @@ class Tags extends StatelessWidget {
       children: [
         Row(
           children: [
-            WebsafeSvg.asset("assets/Icons/Angle down.svg", width: 16),
+            Icon(
+              Icons.keyboard_arrow_down_rounded,
+              size: 16.0,
+              color: kGrayColor,
+            ),
             SizedBox(width: kDefaultPadding / 4),
-            WebsafeSvg.asset("assets/Icons/Markup.svg", width: 20),
+            Icon(
+              Feather.bookmark,
+              size: 20.0,
+              color: kGrayColor,
+            ),
             SizedBox(width: kDefaultPadding / 2),
             Text(
               "Tags",
@@ -39,26 +47,32 @@ class Tags extends StatelessWidget {
           ],
         ),
         SizedBox(height: kDefaultPadding / 2),
-        buildTag(context, color: Color(0xFF23CF91), title: "Design"),
-        buildTag(context, color: Color(0xFF3A6FF7), title: "Work"),
-        buildTag(context, color: Color(0xFFF3CF50), title: "Friends"),
-        buildTag(context, color: Color(0xFF8338E1), title: "Family"),
+        buildTag(context,
+            color: Color(0xFF23CF91), title: "Design", icon: Feather.feather),
+        buildTag(context,
+            color: Color(0xFF3A6FF7), title: "Work", icon: Feather.briefcase),
+        buildTag(context,
+            color: Color(0xFFF3CF50), title: "Friends", icon: Feather.box),
+        buildTag(context,
+            color: Color(0xFF8338E1), title: "Family", icon: Feather.octagon),
       ],
     );
   }
 
   InkWell buildTag(BuildContext context,
-      {@required Color color, @required String title}) {
+      {@required Color color,
+      @required String title,
+      @required IconData icon}) {
     return InkWell(
       onTap: () {},
       child: Padding(
         padding: const EdgeInsets.fromLTRB(kDefaultPadding * 1.5, 10, 0, 10),
         child: Row(
           children: [
-            WebsafeSvg.asset(
-              "assets/Icons/Markup filled.svg",
-              height: 18,
-              color: color,
+            Icon(
+              icon,
+              size: 16.0,
+              color: kGrayColor,
             ),
             SizedBox(width: kDefaultPadding / 2),
             Text(

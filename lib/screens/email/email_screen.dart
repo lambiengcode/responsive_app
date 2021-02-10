@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:outlook/models/Email.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../constants.dart';
 import 'components/header.dart';
@@ -111,9 +111,9 @@ class EmailScreen extends StatelessWidget {
                                               .caption,
                                         ),
                                         SizedBox(width: kDefaultPadding / 4),
-                                        WebsafeSvg.asset(
-                                          "assets/Icons/Download.svg",
-                                          height: 16,
+                                        Icon(
+                                          Feather.download,
+                                          size: 16.0,
                                           color: kGrayColor,
                                         ),
                                       ],
